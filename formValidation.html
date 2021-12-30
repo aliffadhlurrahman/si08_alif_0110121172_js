@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .container {
+            width: 330px;
+            margin: 20px auto;
+            padding: 20px 0 10px 20px;
+            background-color: #A6CF98;
+            border-radius: 5px;
+        }
+
+        label {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 5px 5px 5px grey;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+
+        .input {
+            padding: 0 5px;
+            font-size: 15px;
+            height: 1.5em;
+            width: 300px;
+            outline: none;
+            border: 1px solid silver;
+        }
+
+        #btn {
+            margin: 10px 0 10px 0;
+            background-color: cornflowerblue;
+            border-color: cornflowerblue;
+            border-radius: 5px;
+            color: white;
+            height: 2em;
+            width: 5em;
+        }
+
+        #btn:hover{
+            background-color: midnightblue;
+            border-color: midnightblue;
+        }
+
+        #printt {
+            width: 300px;
+            height: 200px;
+            padding: 5px;
+            margin-bottom: 0.5em;
+            color: black;
+            border: 2px solid black;
+            overflow: auto;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="tes()">
+        <div class="container">
+            <h1>Form Validation</h1>
+            <div class="col -name">
+                <label for="label name">Customer's Name</label><br>
+                <input class="input" type="text" id="name" autocomplete="off" maxlength="30" required>
+            </div>
+            <div class="col -email">
+                <label for="label email">Email</label><br>
+                <input class="input" type="email" id="email" autocomplete="off" required>
+            </div>
+            <div class="col -depart">
+                <label for="label Departure">Departure</label><br>
+                <input class="input" type="time" id="depart" autocomplete="off" minlength="00.00" maxlength="23.59"
+                    required>
+            </div>
+            <div class="col -direc">
+                <label for="label Direction">Direction</label><br>
+                <input class="input" type="text" id="direc" autocomplete="off" required>
+            </div>
+            <div class="col -ticket">
+                <label for="label ticket">Total Ticket</label><br>
+                <input class="input" type="number" id="ticket" autocomplete="off" required>
+            </div>
+            <div class="col -btn">
+                <button type="submit" id="btn" style="cursor: pointer;">Submit</button>
+            </div>
+            <div id="printt"></div>
+        </div>
+    </form>
+
+    <script>
+        function tes(){
+            let name = document.getElementById("name").value;
+                email = document.getElementById("email").value;
+                depart = document.getElementById("depart").value;
+                direc = document.getElementById("direc").value;
+                ticket = document.getElementById("ticket").value;
+
+            let paragraf = document.createElement("p");
+            event.preventDefault()
+            paragraf.innerHTML = "Customer's Name: " + name + "<br>" + "Email: " + email + "<br>" + "Departure: " + depart + "<br>" + "Direction: " + direc + "<br>" + "Total Ticket: " + ticket;
+            document.getElementById("printt").appendChild(paragraf);
+        }
+    </script>
+</body>
+
+</html>

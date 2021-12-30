@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <script>
+        function imgs() {
+            const pick = document.getElementById("pick").value;
+            if (pick == "captainAmerika") {
+                document.getElementById("img").src = "img/CaptainAmerika.png"
+                alert("Ini Chris Evans!")
+            }
+            else if (pick == "ironMan") {
+                document.getElementById("img").src = "img/IronMan.png"
+                alert("Ini Tony Stark!")
+            }
+            else if (pick == "hulk") {
+                document.getElementById("img").src = "img/Hulk.png"
+                alert("Ini Mark Rufallo!")
+            }
+            else if (pick == "clint") {
+                document.getElementById("img").src = "img/Clint.jpg"
+                alert("Ini Jeremy Renner!")
+            }
+            else if (pick == "blackWidow") {
+                document.getElementById("img").src = "img/BlackWidow.png"
+                alert("Ini Scarlett Johansson!")
+            }
+            else if (pick == "spiderman") {
+                document.getElementById("img").src = "img/Spiderman.png"
+                alert("Ini Tom Holland!")
+            }
+            else if (pick == "doktorStrange") {
+                document.getElementById("img").src = "img/DoktorStrange.png"
+                alert("Ini Benedict Cumberbatch!")
+            }
+            else if (pick == "wandaMaximoff") {
+                document.getElementById("img").src = "img/WandaMaximoff.png"
+                alert("Ini Elizabeth Olsen!")
+            }
+            else if (pick == "blackPanther") {
+                document.getElementById("img").src = "img/BlackPanther.png"
+                alert("Ini Chadwick Boseman!")
+            }
+            else if (pick == "thor") {
+                document.getElementById("img").src = "img/Thor.png"
+                alert("Ini Chris Hemsworth!")
+            }
+            else if (pick == "loki") {
+                document.getElementById("img").src = "img/Loki.png"
+                alert("Ini Tom Hiddleston!")
+            }
+        }
+    </script>
+    <style>
+        .container {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #img {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Pick Your Avengers....</h3>
+        <div>
+            <select name="pick" id="pick" onchange="imgs()">
+                <option value="choose">Choose here....</option>
+                <option value="captainAmerika">Captain Amerika</option>
+                <option value="ironMan">Iron Man</option>
+                <option value="hulk">Hulk</option>
+                <option value="clint">Clint</option>
+                <option value="blackWidow">Black Widow</option>
+                <option value="spiderman">Spiderman</option>
+                <option value="doktorStrange">Doktor Strange</option>
+                <option value="wandaMaximoff">Wanda Maximoff</option>
+                <option value="blackPanther">Black Panther</option>
+                <option value="thor">Thor</option>
+                <option value="loki">Loki</option>
+            </select>
+        </div>
+        <img id="img" src="" style="width: 500px;">
+    </div>
+</body>
+
+</html>

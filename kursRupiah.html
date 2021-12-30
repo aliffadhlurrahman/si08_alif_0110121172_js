@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+    <style>
+        .btn {
+            background-color: #A6CF98;
+            border-color: #A6CF98;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #064635;
+            border-color: #064635;
+        }
+
+        .btn:active {
+            background-color: #30475E;
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
+        }
+        
+    </style>
+    <script>
+        function convertToIDR() {
+            let input = (document.form.nilai.value);
+            let valas = (document.form.valas.value);
+            let hasil = 0
+            if (valas == "USD") {
+                hasil = input * 9.915;
+            }
+            else if (valas == 'SGD') {
+                hasil = input * 13.472;
+            }
+            else if (valas == 'RM') {
+                hasil = input * 874;
+            }
+            else if (valas == 'YJ') {
+                hasil = input * 120;
+            }
+            else if (valas == 'EURO') {
+                hasil = input * 15.888;
+            }
+            else if (valas == 'RAS') {
+                hasil = input * 3.592;
+            }
+            else {
+                hasil = 0
+            }
+            document.form.rupiah.value = eval(hasil);
+        }
+    </script>
+</head>
+
+<body>
+    <form name="form">
+        <fieldset style="width: 35%; margin: 200px auto;">
+            <legend>Kurs Rupiah - Mata Uang Asing</legend>
+            <table border="">
+                <tr>
+                    <td style="text-align: center; background-color: #3E8E7E; color: white; border-color: 3E8E7E;">
+                        Masukkan Nilai</td>
+                    <td style="text-align: center; background-color: #3E8E7E; color: white; border-color: 3E8E7E;">
+                        Valas</td>
+                    <td style="text-align: center; background-color: #3E8E7E; color: white; border-color: 3E8E7E;">
+                        Nilai Rupiah</td>
+                </tr>
+                <tr>
+                    <td><input name="nilai" type="text" autocomplete="off" style="outline: none;"></td>
+                    <td>
+                        <select name="valas" id="valas" onchange="convertToIDR()" style="outline: none;"> 
+                            <option value="convert" style="text-align: center;">-- Convert to --</option>
+                            <option value="USD">Dollar US</option>
+                            <option value="SGD">Dollar Singapore</option>
+                            <option value="RM">Ringgit Malaysia</option>
+                            <option value="YJ">Yen Jepan</option>
+                            <option value="EURO">Euro</option>
+                            <option value="RAS">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td><input name="rupiah" type="text" autocomplete="off" style="outline: none;"></td>
+                </tr>
+            </table>
+            <br>
+            <button type="reset" class="btn">Reset</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

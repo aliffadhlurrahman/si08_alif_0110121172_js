@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Login</title>
+    <script src="otentikasi.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #c1d9e6;
+            width: 450px;
+            height: 420px;
+            margin: auto;
+            border-radius: 5px;
+        }
+
+        .login {
+            width: 360px;
+            background-color: #406882;
+            border-color: #406882;
+            color: white;
+            margin: 30px 0 30px 0;
+            height: 45px;
+            width: 365px;
+            font-size: 20px;
+            outline: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 3px;
+            transition: .5s;
+        }
+
+        .login:hover {
+            background-color: #1A374D;
+            border-color: #1A374D;
+        }
+
+        .login:active {
+            background-color: #1A374D;
+            box-shadow: 0 0.5px #666;
+            transform: translateY(0.5px);
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 5px 5px 5px grey;
+            margin: 100px 0 auto;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 35px;
+        }
+
+        #usname,
+        #pass {
+            height: 40px;
+            width: 350px;
+            font-size: 18px;
+            outline: none;
+            padding: 0 5px;
+        }
+
+        #usname {
+            margin-bottom: 15px;
+        }
+
+        .font {
+            font-size: 18px;
+            color: #130f40;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form name="form">
+            <h2>Authentication Login</h2>
+            <table style="margin: 20px auto;">
+                <tr>
+                    <td class="font">Username</td>
+                </tr>
+                <tr>
+                    <td><input id="usname" type="text" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td class="font">Password</td>
+                </tr>
+                <tr>
+                    <td><input id="pass" type="password" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="login" onclick="login()">Login</button></td>
+                </tr>
+                <tr>
+                    <td><b>Note:</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        For this demo we use <b>aliff13</b> for username and <b>integrity</b><br> for password.
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
